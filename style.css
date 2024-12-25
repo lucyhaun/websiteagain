@@ -1,0 +1,9 @@
+h1 {font-family:arial; text-align: center; color:rgb(80, 66, 51)}
+body{background-image:url(rosey.jpg)}
+.b {margin-top: 5%; margin-bottom: 5%; margin-right: auto; margin-left: auto; background-color: white; 
+width: 60%; padding-bottom: 1%; padding-top: 1%; border-radius: 20px;
+transition: all 0.5s;}
+.c {padding-top: 1%;
+    padding-bottom: 1%; background-color: rgb(34, 22, 16);}
+button {margin: 2%; background-color: rgb(207, 175, 146); font-family: arial;}
+input[type="submit"] {background-color: rgb(207, 175, 146); font-family: arial;}
