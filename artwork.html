@@ -2,6 +2,9 @@
 <html lang="en">
     <head>
         <link rel="stylesheet" href="style.css">
+        <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Your Page Title</title>
@@ -11,6 +14,7 @@
     </style>
     </head>
     <body>
+    <div class="testt">
         <div class="b">
             <h1>
                 Lucy Eade  
@@ -19,14 +23,26 @@
                 Back
             </a>
             <div class="stuff">
-                <h2>Late 2024 and 2025 Oils <Br> Botanic Gardens</h2>
-                <div class="line"></div>
-                <br>
-                <img src="oils1.jpg" width= 100%;>  <br>
-                <br>
-                <h2>Friends and Family</h2>
-                <img src="oils3.jpg" width= 100%>
+            <h2>Late 2024 and 2025 Oils (swipeable)</h2>
+                <div class="line"></div> 
+                <div class="container">
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide">
+                            <img src="oils1.jpg" width= 100%;> 
+                            <p>test1</p>
+                          </div>
+                          <div class="swiper-slide">
+                            <img src="oils3.jpg" width= 100%>
+                            <P>Fam and friends</P>
+                          </div>
+                      </div>
+                    </div>
+                </div>
+                <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+                <script src="app.js"></script>
             </div>
         </div>
+    </div>
     </body>
 </html>
