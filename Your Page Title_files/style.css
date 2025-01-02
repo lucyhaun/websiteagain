@@ -1,0 +1,91 @@
+h1 {font-family:Times; text-align: center; color:rgb(80, 66, 51)}
+a {color:rgb(172, 172, 172);font-family:arial; margin-right: 20px; margin-left: 20px; font-size: 20px; text-decoration: none;}
+body{
+    background-image:url(rosey.jpg); font-family:Times; color:rgb(77, 63, 63)
+}
+.b {margin-top: 5%; margin-bottom: 5%; margin-right: auto; margin-left: auto; background-color: white; 
+width: 70%; padding-bottom: 1%; padding-top: 1%; border-radius: 20px;
+transition: all 0.5s;}
+.c {padding-top: 1%;
+    padding-bottom: 1%; background-color: rgb(255, 255, 255);}
+input[type="submit"] {
+    background-color:none; font-family: arial; font-size: 20px; 
+    text-decoration: none;
+    border:none;
+    color:rgb(173, 173, 173)
+}
+.word {margin-bottom: 3%}
+.dropdown {
+    position: relative;
+    display: inline-block
+}
+.dropdownstuff {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    text-align: left;
+}
+.dropdownstuff a{
+    font-size: 100%;
+}
+.dropdown:hover .dropdownstuff {
+    display: block
+}
+.line {
+    width:100%;
+    height:2px;
+    background-color: grey
+}
+*,
+*::before
+*::after {
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+.testt {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+ 
+.container{
+    width: 100%;
+    height: 100%;
+}
+
+.swiper{
+    width: auto;
+    height: auto;
+    overflow: hidden;
+}
+.swiper-slide {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    user-select: none;
+}
+
+/*background colour*/
+.swiper-slide::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(44, 44, 44);
+    mix-blend-mode: multiply;
+}
+.swiper-slide img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.swiper-slide-active::after {
+    background: none
+}

@@ -1,9 +1,25 @@
+const swiperContainer = document.querySelector('.swiper');
+const firstImage = swiperContainer.querySelector('.swiper-slide img');
+
+function adjustSwiperHeight() {
+    if (firstImage.complete) {
+        swiperContainer.style.height = firstImage.offsetHeight + 'px';
+    } else {
+        firstImage.onload = () => {
+            swiperContainer.style.height = firstImage.offsetHeight + 'px';
+        };
+    }
+    }
 var swiper = new Swiper(".swiper",{
     grabCursor: true,
-    initialSlide: 4,
+    initialSlide: 1,
     centeredSlides: true,
-    slidesPerView:"auto",
-    spaceBetween: 14,
+    slidesPerView: 2,
+    spaceBetween: 10,
+    on: {
+        init: adjustSwiperHeight,
+        slideChangeTransitionStart: adjustSwiperHeight,
+    },
     freeMode:false,
     on: {
         click() {
