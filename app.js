@@ -10,20 +10,24 @@ function adjustSwiperHeight() {
         };
     }
     }
-var swiper = new Swiper(".swiper",{
+var swiper = new Swiper(".swiper", {
     grabCursor: true,
     initialSlide: 1,
     centeredSlides: true,
-    slidesPerView: 2,
+    slidesPerView: 1,
     spaceBetween: 10,
     on: {
         init: adjustSwiperHeight,
         slideChangeTransitionStart: adjustSwiperHeight,
     },
-    freeMode:false,
+    freeMode:true,
     on: {
         click() {
             swiper.slideTo(this.clickedIndex);
         },
     },
+    breakpoints: {
+        600:{
+        slidesPerView: 2,
+    }}
 });

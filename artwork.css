@@ -1,0 +1,43 @@
+.container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 2px
+}
+
+/*the whole swiper*/
+.swiper{
+    overflow: hidden;
+    width: 100%;
+    height: 400px;
+}
+
+/*each box the pic is in*/
+.swiper-slide {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    user-select: none;
+    padding: 20px;
+}
+
+@media (max-width:600px) {
+    .word a {
+        font-size: 15px;
+    }
+    .dropdownstuff a {
+        font-size: 12px;
+    }
+    .b {
+    width:90%
+}
+}
