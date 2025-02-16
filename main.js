@@ -26,9 +26,4 @@ var swiper = new Swiper(".swiper",{
             swiper.slideTo(this.clickedIndex);
         },
     },
-
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
 });

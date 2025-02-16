@@ -12,16 +12,17 @@ a {color:rgb(172, 172, 172);
         font-size: 15px; 
         text-decoration: none;}
 body{
-    background-image:url(artworkfiles/yerrr.jpg); font-family:Times; color:rgb(77, 63, 63)
+    background-image:url(artworkfiles/yerrr.jpg); font-family:Times;
+    color:rgb(77, 63, 63);
+    position: relative;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
 }
 .b {
-    margin-top: auto; 
-    margin-bottom: auto; 
-    margin-right: auto; 
-    margin-left: auto; 
     background-color: white; 
     width: 70%; 
-    padding-bottom: 1%; 
+    padding-bottom: 5%; 
     padding-top: 1%; 
     border-radius: 20px;
 transition: all 0.5s;}
@@ -62,12 +63,5 @@ input[type="submit"] {
     margin: 0;
     padding:0;
     box-sizing: border-box;
-}
-.testt {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
 }
  
