@@ -12,19 +12,21 @@ a {color:rgb(172, 172, 172);
         font-size: 15px; 
         text-decoration: none;}
 body{
-    background-image:url(artworkfiles/yerrr.jpg); font-family:Times;
+    background-image:url(pppp.jpg); font-family:Times; background-size: 1450px;
     color:rgb(77, 63, 63);
     position: relative;
     display: flex; 
     align-items: center;
     justify-content: center;
 }
+
 .b {
     background-color: white; 
     width: 70%; 
     padding-bottom: 5%; 
     padding-top: 1%; 
     border-radius: 20px;
+    margin-top: 50px;
 transition: all 0.5s;}
 .c {padding-top: 1%;
     padding-bottom: 1%; background-color: rgb(255, 255, 255);}
@@ -65,3 +67,11 @@ input[type="submit"] {
     box-sizing: border-box;
 }
  
+@media (max-width:600px) {
+    .b {
+        width: 99%; 
+        padding-bottom: 0%; 
+        padding-top: 1%; 
+        border-radius: 20px;
+        margin-top:80px;
+    }}

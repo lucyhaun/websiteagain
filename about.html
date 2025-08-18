@@ -2,26 +2,10 @@
 <html lang="en">
     <head>
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="artwork.css">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Your Page Title</title>
-    <style>
-    form {padding: 5%;font-size: 15px; color:rgb(172, 172, 172);font-family:arial; text-decoration: none;}
-    input[type="text"] 
-        {width: 100%; 
-        padding-bottom: 3%; 
-        border: 1px solid rgb(185, 185, 185);
-        border-radius: 10px;
-        margin-right: 10%
-    }
-    textarea[id="word"] {
-        width: 100%; 
-        margin-right: 10%;
-        padding-bottom: 10%;
-        border: 1px solid rgb(185, 185, 185); border-radius: 10px;}
-    @media (max-width:1300px) {
-    }
-    </style>
     </head>
     <body>
     <div class="b">
@@ -34,55 +18,5 @@
             </a>
         </div>
         <div>
-            <form onsubmit="handlesubmit(event)">
-                <label for= "name">Name:</label> <br>
-                <input type="text" id="name"> <br>
-                <br>
-                <label for= "email">Email:</label> <br>
-                <input type="text" id="email"> <br>
-                <br>
-                <label for="word">Inquiry:</label> <br>
-                <textarea id="word">Currently does not work, please email me at lucyeade@outlook.com</textarea><br>
-                <input type="submit" style="font-size:15px">
-            </form>
-        </div>
-    </div>
-    </body>
-    <script>
-        async function handlesubmit(event) {
-            event.preventDefault();
-            const data = {
-                name: document.querySelector("#name").value,
-                email: document.querySelector("#email").value,
-                description: document.querySelector("#word").value,
-            };
-
-            console.log(name.value);
-
-            const url = "http://127.0.0.1:5000/";
-            try {
-                const response = await fetch(url, {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json",
-                    },
-                    body: JSON.stringify(data),
-                });
-                // response status == 200
-                if (!response.ok) {
-                    throw new Error(`Response status: ${response.status}`);
-                }
-
-                const json = await response.json();
-                console.log(json);
-            } catch (error) {
-                console.error(error.message);
-            }
-                
-                //probably not correct
-                const check = '@'
-                if (!(check in data[email]))
-                console.error(error.message);
-        }
-    </script>
-</html>
+            <p></p>
+        </html>
