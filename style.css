@@ -1,6 +1,10 @@
-h1 {font-family:Times; text-align: center; color:rgb(80, 66, 51)}
+h1 {font-family: "Carattere"; 
+    font-weight: 300;
+    font-style: normal;
+    font-size: 40px;  
+    text-align: center; 
+    color:rgb(44, 43, 42)}
 a {color:rgb(172, 172, 172);
-    font-family:arial; 
     margin-right: 20px; 
     margin-left: 20px; 
     font-size: 18px; 
@@ -21,6 +25,7 @@ body{
 }
 
 .b {
+    
     background-color: white; 
     width: 70%; 
     padding-bottom: 5%; 
