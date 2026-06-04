@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Carattere&display=swap" rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Writing</title>
+
+    <style>
+        p {
+            padding-left: 30px;
+            padding-right: 30px;
+            color: rgb(87, 87, 87);
+            margin-bottom: 0px;
+            font-size: 15px;
+        }
+
+        h2 {
+            padding-left: 30px;
+            color: rgb(56, 56, 56);
+            font-size: 18px;
+        }
+
+        h1 {
+            color: gray;
+        }
+
+        /* Album Buttons */
+        .album-buttons {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .album-buttons button {
+            padding: 12px 24px;
+            margin: 0 8px;
+            border: none;
+            border-radius: 6px;
+            background: #666;
+            color: white;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .album-buttons button:hover {
+            background: #444;
+        }
+
+        /* Masonry Gallery */
+        .gallery {
+            display: none;
+            column-count: 5;
+            column-gap: 15px;
+            padding: 0 30px 30px;
+        }
+
+        .gallery.active {
+            display: block;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            break-inside: avoid;
+        }
+
+        /* Tablet */
+        @media (max-width: 700px) {
+            .gallery {
+                column-count: 2;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <h1 style="text-align:center;">Camera</h1>
+
+    <div class="album-buttons">
+        <button onclick="showAlbum('album1')">Latest</button>
+        <button onclick="showAlbum('album2')">Summer</button>
+    </div>
+
+    <!-- Album 1 -->
+    <div id="album1" class="gallery active">
+        <img src="photos/po1.jpg" alt="">
+        <img src="photos/po2.jpg" alt="">
+        <img src="photos/po5.jpg" alt="">
+        <img src="photos/po6.jpg" alt="">
+        <img src="photos/po7.jpg" alt="">
+        <img src="photos/po9.jpg" alt="">
+        <img src="photos/po10.jpg" alt="">
+        <img src="photos/po11.jpg" alt="">
+        <img src="photos/po12.jpg" alt="">
+        <img src="photos/po13.jpg" alt="">
+        <img src="photos/po14.jpg" alt="">
+        <img src="photos/po16.jpg" alt="">
+        <img src="photos/po17.jpg" alt="">
+        <img src="photos/po20.jpg" alt="">
+        <img src="photos/po22.jpg" alt="">
+        <img src="photos/po23.jpg" alt="">
+        <img src="photos/po24.jpg" alt="">
+        <img src="photos/po25.jpg" alt="">
+        <img src="photos/po26.jpg" alt="">
+        <img src="photos/po28.jpg" alt="">
+        <img src="photos/po29.jpg" alt="">
+        <img src="photos/po30.jpg" alt="">
+        <img src="photos/po31.jpg" alt="">
+        <img src="photos/po32.jpg" alt="">
+        <img src="photos/po33.jpg" alt="">
+        <img src="photos/po34.jpg" alt="">
+        <img src="photos/po35.jpg" alt="">
+        <img src="photos/po36.jpg" alt="">
+        <img src="photos/po37.jpg" alt="">
+        <img src="photos/po38.jpg" alt="">
+        <img src="photos/po39.jpg" alt="">
+        <img src="photos/po40.jpg" alt="">
+        <img src="photos/po41.jpg" alt="">
+        <img src="photos/po42.jpg" alt="">
+        <img src="photos/po43.jpg" alt="">
+        <img src="photos/po44.jpg" alt="">
+        <img src="photos/po45.jpg" alt="">
+        <img src="photos/po46.jpg" alt="">
+        <img src="photos/po47.jpg" alt="">
+        <img src="photos/po48.jpg" alt="">
+        <img src="photos/po49.jpg" alt="">
+        <img src="photos/po50.jpg" alt="">
+    </div>
+
+    <!-- Album 2 -->
+    <div id="album2" class="gallery">
+         <img src="photos/p1.jpg" alt="">
+        <img src="photos/p2.jpg" alt="">
+        <img src="photos/p3.jpg" alt="">
+        <img src="photos/p4.jpg" alt="">
+        <img src="photos/p5.jpg" alt="">
+        <img src="photos/p9.jpg" alt="">
+        <img src="photos/p10.jpg" alt="">
+        <img src="photos/p11.jpg" alt="">
+        <img src="photos/p12.jpg" alt="">
+        <img src="photos/p13.jpg" alt="">
+        <img src="photos/p14.jpg" alt="">
+        <img src="photos/p15.jpg" alt="">
+        <img src="photos/p16.jpg" alt="">
+        <img src="photos/p17.jpg" alt="">
+        <img src="photos/p18.jpg" alt="">
+        <img src="photos/p19.jpg" alt="">
+        <img src="photos/p20.jpg" alt="">
+        <img src="photos/p21.jpg" alt="">
+         <img src="photos/p22.jpg" alt="">
+        <img src="photos/p23.jpg" alt="">
+        <img src="photos/p24.jpg" alt="">
+        <img src="photos/p25.jpg" alt="">
+         <img src="photos/p26.jpg" alt="">
+        <img src="photos/p27.jpg" alt="">
+        <img src="photos/p28.jpg" alt="">
+    </div>
+
+    <script>
+        function showAlbum(albumId) {
+            document.querySelectorAll('.gallery').forEach(gallery => {
+                gallery.classList.remove('active');
+            });
+
+            document.getElementById(albumId).classList.add('active');
+        }
+    </script>
+
+</body>
+</html>

@@ -1,38 +1,34 @@
 h1 {
-    font-weight: 300;
-    font-style: normal;
-    font-size: 40px;  
-    text-align: center; 
-    color:rgb(121, 118, 115)}
-a {color:rgb(172, 172, 172);
+    color: white;
+    text-align: center;
+    font-size: 60px;
+}
+a {color:rgb(255, 255, 255);
     margin-right: 20px; 
     margin-left: 20px; 
-    font-size: 18px; 
+    font-size: 20px; 
     text-decoration: none;}
-.back a {color:rgb(172, 172, 172);
+.back a {color:rgb(255, 255, 255);
          
         margin-right: 20px; 
         margin-left: 20px; 
         font-size: 15px; 
         text-decoration: none;}
 body{
-    background-image:url(pppp.jpg); font-family:Times; background-size: 1450px;
-    color:rgb(77, 63, 63);
-    position: relative;
-    display: flex; 
-    align-items: center;
-    justify-content: center;
+     display: flex;
+  justify-content: center;
+  height: 100vh;
 }
 
-.b {
-    
-    background-color: white; 
-    width: 70%; 
-    padding-bottom: 5%; 
-    padding-top: 1%; 
-    border-radius: 20px;
-    margin-top: 50px;
-transition: all 0.5s;}
+
+#bg-video {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+
 .c {padding-top: 1%;
     padding-bottom: 1%; background-color: rgb(255, 255, 255);}
 input[type="submit"] {
@@ -72,11 +68,10 @@ input[type="submit"] {
     box-sizing: border-box;
 }
  
-@media (max-width:600px) {
+@media (max-width:10000px) {
     .b {
         width: 99%; 
         padding-bottom: 0%; 
         padding-top: 1%; 
         border-radius: 20px;
-        margin-top:80px;
     }}
