@@ -4,174 +4,99 @@
     <link rel="Preconnect" href="httPs://fonts.googleaPis.com">
     <link rel="Preconnect" href="httPs://fonts.gstatic.com" crossorigin>
     <link href="httPs://fonts.googleaPis.com/css2?family=Carattere&disPlay=swaP" rel="stylesheet">
-    
+    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewPort" content="width=device-width, initial-scale=1.0">
-    <title>Writing</title>
+    <title>Camera</title>
 </head>
     <style>
-        P {
-            Padding-left: 30Px;
-            Padding-right: 30Px;
-            color: rgb(87, 87, 87);
-            margin-bottom: 0Px;
-            font-size: 15Px;
-        }
+         p { padding-left:30px; 
+        padding-right: 30px; 
+       color: rgb(87, 87, 87);
+       margin-bottom: 0px;
+       font-size: 15px;}
+    h2 { padding-left: 30px; 
+       color: rgb(54, 54, 54);
+       font-size: 18px;}
+    h1 {color: gray;}
+    body {
+    margin: 0;
+    padding: 20px;
+    background: #f3f3f3;
+    }
 
-        h2 {
-            Padding-left: 30Px;
-            color: rgb(56, 56, 56);
-            font-size: 18Px;
-        }
+    .gallery {
+    column-count: 4;
+    column-gap: 15px;
+    }
 
-        h1 {
-            color: gray;
-        }
+    .gallery img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 15px;
+    break-inside: avoid;
+    border-radius: 8px;
+    }
 
-        /* Album Buttons */
-        .album-buttons {
-            text-align: center;
-            margin: 30Px 0;
-        }
+/* Tablet */
+@media (max-width: 600px) {
+    .gallery {
+        column-count: 2;
+    }
+}
 
-        .album-buttons button {
-            Padding: 12Px 24Px;
-            margin: 0 8Px;
-            border: none;
-            border-radius: 6Px;
-            background: #666;
-            color: white;
-            cursor: Pointer;
-            font-size: 14Px;
-        }
+    .fade-image {
+    opacity: 0;
+    transform: translateY(50px);
+    transition:
+    opacity 3s ease,
+    transform 3s ease;
+    }
 
-        .album-buttons button:hover {
-            background: #444;
-        }
-
-        /* Masonry Gallery */
-        .gallery {
-            disPlay: none;
-            column-count: 7;
-            column-gaP: 15Px;
-            Padding: 0 30Px 30Px;
-        }
-
-        .gallery.active {
-            disPlay: block;
-        }
-
-        .gallery img {
-            width: 100%;
-            height: auto;
-            disPlay: block;
-            margin-bottom: 15Px;
-            border-radius: 8Px;
-            break-inside: avoid;
-        }
-
-        /* Tablet */
-        @media (max-width: 700Px) {
-            .gallery {
-                column-count: 3;
-            }
-        }
+    .fade-image.visible {
+    opacity: 1;
+    transform: translateY(0);
+    }   
 
     </style>
 
 
-<body>
+    <body>
+            <div class="b">
+                <h1>
+                    Lucy Haun 
+                </h1>
+            
 
-    <h1 style="text-align:center;">Camera</h1>
-
-    <div class="album-buttons">
-        <button onclick="showAlbum('album1')">Latest</button>
-        <button onclick="showAlbum('album2')">Summer</button>
-    </div>
-
-    <!-- Album 1 -->
-    <div id="album1" class="gallery active">
-        <img src="Photos/po1.jpg" alt="">
-        <img src="Photos/po2.jpg" alt="">
-        <img src="Photos/po5.jpg" alt="">
-        <img src="Photos/po6.jpg" alt="">
-        <img src="Photos/po7.jpg" alt="">
-        <img src="Photos/po9.jpg" alt="">
-        <img src="Photos/po10.jpg" alt="">
-        <img src="Photos/po11.jpg" alt="">
-        <img src="Photos/po12.jpg" alt="">
-        <img src="Photos/po13.jpg" alt="">
-        <img src="Photos/po14.jpg" alt="">
-        <img src="Photos/po16.jpg" alt="">
-        <img src="Photos/po17.jpg" alt="">
-        <img src="Photos/po20.jpg" alt="">
-        <img src="Photos/po22.jpg" alt="">
-        <img src="Photos/po23.jpg" alt="">
-        <img src="Photos/po24.jpg" alt="">
-       
-        <img src="Photos/po26.jpg" alt="">
-        <img src="Photos/po28.jpg" alt="">
-        <img src="Photos/po29.jpg" alt="">
-        <img src="Photos/po30.jpg" alt="">
-        <img src="Photos/po31.jpg" alt="">
-        <img src="Photos/po32.jpg" alt="">
-        <img src="Photos/po33.jpg" alt="">
-        <img src="Photos/po34.jpg" alt="">
-        <img src="Photos/po35.jpg" alt="">
-        <img src="Photos/po36.jpg" alt="">
-       
-        <img src="Photos/po38.jpg" alt="">
-        <img src="Photos/po39.jpg" alt="">
-        <img src="Photos/po40.jpg" alt="">
-        <img src="Photos/po41.jpg" alt="">
-        <img src="Photos/po42.jpg" alt="">
-        <img src="Photos/po43.jpg" alt="">
+        <div class="gallery fade-image">
         
-        <img src="Photos/po45.jpg" alt="">
-        <img src="Photos/po46.jpg" alt="">
-        <img src="Photos/po47.jpg" alt="">
-        <img src="Photos/po48.jpg" alt="">
-        <img src="Photos/po49.jpg" alt="">
-        <img src="Photos/po50.jpg" alt="">
-    </div>
-
-    <!-- Album 2 -->
-    <div id="album2" class="gallery">
-         <img src="Photos/p1.jpg" alt="">
-        <img src="Photos/p2.jpg" alt="">
-        <img src="Photos/p3.jpg" alt="">
-        <img src="Photos/p4.jpg" alt="">
-        <img src="Photos/p5.jpg" alt="">
+        <img src="23.jpg" alt="">
+        <img src="22.jpg" alt="">
+        <img src="21.jpg" alt="">
+        <img src="20.jpg" alt="">
+        <img src="24.jpg" alt="">
         
-        <img src="Photos/p10.jpg" alt="">
-        
-        <img src="Photos/p12.jpg" alt="">
-        <img src="Photos/P13.jpg" alt="">
-        <img src="Photos/p14.jpg" alt="">
-        <img src="Photos/p15.jpg" alt="">
-        <img src="Photos/p17.jpg" alt="">
-        <img src="Photos/p18.jpg" alt="">
-        <img src="Photos/p19.jpg" alt="">
-        <img src="Photos/p20.jpg" alt="">
-        <img src="Photos/p21.jpg" alt="">
-         <img src="Photos/p22.jpg" alt="">
-        <img src="Photos/p23.jpg" alt="">
-        <img src="Photos/p24.jpg" alt="">
-        <img src="Photos/p25.jpg" alt="">
-         <img src="Photos/p26.jpg" alt="">
-        <img src="Photos/p27.jpg" alt="">
-        <img src="Photos/p28.jpg" alt="">
-    </div>
+        </div>
 
-    <scriPt>
-        function showAlbum(albumId) {
-            document.querySelectorAll('.gallery').forEach(gallery => {
-                gallery.classList.remove('active');
+        <script>
+            const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
             });
-
-            document.getElementById(albumId).classList.add('active');
+        },
+        {
+            rootMargin: "0px 0px -150px 0px"
         }
-    </scriPt>
+        );
 
-</body>
+        document
+        .querySelectorAll('.fade-image')
+        .forEach(img => observer.observe(img));
+        </script>
+    </body>
 </html>

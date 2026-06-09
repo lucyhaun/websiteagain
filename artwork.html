@@ -13,9 +13,47 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Artwork</title>
     <style>
-    h3 { text-align: left;}
-    .stuff {padding: 4%}
+    h2 { text-align: left;}
     h1 {color: gray;}
+
+    body {
+    margin: 0;
+    padding: 20px;
+    background: #f3f3f3;
+    }
+     .fade-image {
+    opacity: 0;
+    transform: translateY(50px);
+    transition:
+    opacity 3s ease,
+    transform 3s ease;
+    }
+
+    .fade-image.visible {
+    opacity: 1;
+    transform: translateY(0);
+    }   
+     .gallery {
+    column-count: 2;
+    column-gap: 15px;
+    }
+
+    .gallery img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 15px;
+    break-inside: avoid;
+    border-radius: 8px;
+    }
+
+/* Tablet */
+@media (max-width: 600px) {
+    .gallery {
+        column-count: 2;
+    }
+}
+
     </style>
     </head>
     <body>
@@ -24,65 +62,41 @@
                 Lucy Haun 
             </h1>
           
-            <div class="stuff">
-            <h3>Oils</h3>
+            <div>
+            <h2>Oil on wooden board</h2>
                 
-                <div class="pix">
-                    <img src="nov.jpg" style="display: inline-block; width: 99%"> 
-                    <h3>Late</h3>
-                    <img src="nov2.jpg" style="display: inline-block; width: 53%">
-                    <img src="nov6.jpg" style="display: inline-block; width: 45%">
-                    <img src="nov4.jpg" style="display: inline-block; width: 46%">  
+                <div class=" fade-image gallery">
+                    <img src="nov.jpg" > 
+                    
+                    <img src="nov2.jpg">
+                    <img src="nov6.jpg">
+                    <img src="nov4.jpg">  
                   
-                    <img src="nov3.jpg" style="display: inline-block; width: 52%">  
-                    <h3>Early</h3>
-                    <img src="artworkfiles/twop.jpg" style="display: inline-block; width: 49%">
-                    <img src="artworkfiles/onep.jpg" style="display: inline-block; width: 49%">
+                    <img src="nov3.jpg">  
+                
+                    <img src="artworkfiles/twop.jpg" style="display: inline-block; width: 49.5%">
+                    <img src="artworkfiles/onep.jpg" style="display: inline-block; width: 49.5%">
                             
                              
                 </div>
-                   <br>
-                <h3>Pre Oils digital</h3>
-                <div class="line"></div> 
-                <div class="container">
-                    <div class="swiper">
-                        <div class="swiper-wrapper">
-                          <div class="swiper-slide">
-                            <img src="artworkfiles/site3.jpg"> 
-                          </div>
-                          <div class="swiper-slide">
-                            <img src="artworkfiles/site7.jpg">
-                          </div>
-                          <div class="swiper-slide">
-                            <img src="artworkfiles/site4.jpg">
-                          </div>
-                          <div class="swiper-slide">
-                            <img src="artworkfiles/site5.jpg">
-                          </div>
-                          <div class="swiper-slide">
-                            <img src="artworkfiles/site1.jpg">
-                          </div>
-                          <div class="swiper-slide">
-                            <img src="artworkfiles/site6.jpg">
-                          </div>
-                          <div class="swiper-slide">
-                            <img src="artworkfiles/site8.jpg">
-                          </div>
-                          <div class="swiper-slide">
-                            <img src="artworkfiles/site9.jpg">
-                          </div>
-                          <div class="swiper-slide">
-                            <img src="artworkfiles/site11.jpg">
-                          </div>
-                          <div class="swiper-slide">
-                            <img src="artworkfiles/site12.jpg">
-                          </div>
-                      </div>
-                    </div>
-                </div>
-                <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-                <script src="app.js"></script>
-            </div>
-        </div>
+       <script>
+            const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+            });
+        },
+        {
+            rootMargin: "0px 0px -150px 0px"
+        }
+        );
+
+        document
+        .querySelectorAll('.fade-image')
+        .forEach(img => observer.observe(img));
+        </script>
     </body>
 </html>

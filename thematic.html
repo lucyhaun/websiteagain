@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="style.css">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Writing</title>
+        <title>Camera</title>
     </head>
     <style>
     p { padding-left:30px; 
@@ -22,7 +22,7 @@
     body {
     margin: 0;
     padding: 20px;
-    background: #ffffff;
+    background: #f3f3f3;
     }
 
     .gallery {
@@ -46,51 +46,79 @@
     }
 }
 
+    .fade-image {
+    opacity: 0;
+    transform: translateY(50px);
+    transition:
+    opacity 3s ease,
+    transform 3s ease;
+    }
+
+    .fade-image.visible {
+    opacity: 1;
+    transform: translateY(0);
+    }   
 
     </style>
 
     <body>
-        <div class="b">
-            <h1>
-                Lucy Haun 
-            </h1>
-          
+            <div class="b">
+                <h1>
+                    Lucy Haun 
+                </h1>
+            
+        <div class="gallery fade-image">
+        <img src="Photos/them2.jpg" alt="">
+        <img src="Photos/them3.jpg" alt="">
+        <img src="Photos/them4.jpg" alt="">
+        <img src="Photos/them5.jpg" alt="">
+        <img src="Photos/them6.jpg" alt="">
+        <img src="Photos/them7.jpg" alt="">
+        <img src="Photos/them8.jpg" alt="">
+        <img src="Photos/them9.jpg" alt="">
+        <img src="Photos/them10.jpg" alt="">
+        <img src="Photos/them11.jpg" alt="">
+        <img src="Photos/them12.jpg" alt="">
+        <img src="Photos/them13.jpg" alt="">
+        <img src="Photos/them14.jpg" alt="">
+        <img src="Photos/them15.jpg" alt="">
+        <img src="Photos/them16.jpg" alt="">
+        <img src="Photos/them17.jpg" alt="">
+        <img src="Photos/them18.jpg" alt="">
+        <img src="Photos/them19.jpg" alt="">
+        <img src="Photos/them20.jpg" alt="">
+        <img src="Photos/them21.jpg" alt="">
+        <img src="Photos/them22.jpg" alt="">
+        <img src="Photos/them23.jpg" alt="">
+        <img src="Photos/them24.jpg" alt="">
+        <img src="Photos/them25.jpg" alt="">
+        <img src="Photos/them27.jpg" alt="">
+        <img src="Photos/them28.jpg" alt="">
+        <img src="Photos/them30.jpg" alt="">
+        <img src="Photos/them31.jpg" alt="">
+        <img src="Photos/them32.jpg" alt="">
 
-    <div class="gallery">
-    <img src="Photos/them2.jpg" alt="">
-    <img src="Photos/them3.jpg" alt="">
-    <img src="Photos/them4.jpg" alt="">
-    <img src="Photos/them5.jpg" alt="">
-    <img src="Photos/them6.jpg" alt="">
-    <img src="Photos/them7.jpg" alt="">
-    <img src="Photos/them8.jpg" alt="">
-    <img src="Photos/them9.jpg" alt="">
-    <img src="Photos/them0.jpg" alt="">
-    <img src="Photos/them00.jpg" alt="">
-    <img src="Photos/them10.jpg" alt="">
-    <img src="Photos/them11.jpg" alt="">
-    <img src="Photos/them12.jpg" alt="">
-    <img src="Photos/them13.jpg" alt="">
-    <img src="Photos/them14.jpg" alt="">
-    <img src="Photos/them15.jpg" alt="">
-    <img src="Photos/them16.jpg" alt="">
-    <img src="Photos/them17.jpg" alt="">
-    <img src="Photos/them18.jpg" alt="">
-    <img src="Photos/them19.jpg" alt="">
-    <img src="Photos/them20.jpg" alt="">
-    <img src="Photos/them21.jpg" alt="">
-    <img src="Photos/them22.jpg" alt="">
-    <img src="Photos/them23.jpg" alt="">
-    <img src="Photos/them24.jpg" alt="">
-    <img src="Photos/them25.jpg" alt="">
-    <img src="Photos/them27.jpg" alt="">
-    <img src="Photos/them28.jpg" alt="">
-    <img src="Photos/them30.jpg" alt="">
-    <img src="Photos/them31.jpg" alt="">
-    <img src="Photos/them32.jpg" alt="">
+        
+        </div>
+            
+        <script>
+            const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+            });
+        },
+        {
+            rootMargin: "0px 0px -150px 0px"
+        }
+        );
 
-    
-    </div>
-
+        document
+        .querySelectorAll('.fade-image')
+        .forEach(img => observer.observe(img));
+        </script>
     </body>
 </html>
